@@ -1,3 +1,3 @@
 class AuthService {
-  final apiURL = 'https://localhost:7047/api';
+  final String baseUrl = 'localhost:7047/api/User/Login';
 }

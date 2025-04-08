@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:front_m/service/auth_service.dart';
 import 'package:http/http.dart' as http;
@@ -7,10 +6,10 @@ import 'package:http/http.dart' as http;
 class UserController {
   final AuthService _authService = AuthService();
 
-  //Log
+  //Login
   Future<bool> loginUser(String email, String password, BuildContext context) async {
     try {
-      final response = await http.post(Uri.parse('${_authService.apiURL}/User/Login'),
+      final response = await http.post(Uri.parse('${_authService.baseUrl}/User/Login'),
       headers: {
         'Content-Type': 'application/json; character=UTF8',
       },
